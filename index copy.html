@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="grid">
+    <div class="row1">
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+    </div>
+    <div class="row2">
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+    </div>
+    <div class="row3">
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+    </div>
+    <div class="row4">
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+        <div id= "box"></div>
+    </div>
+</div>
+
+<button id="reset">RESET</button>
+
+<script>
+numberBoxes =prompt("How big of a grid? Maximum 100",10);
+
+function run(){
+
+const reset = document.getElementById("reset");
+reset.addEventListener("click",()=> {
+  location.reload();
+});
+
+
+
+const boxes = document.querySelectorAll("#box");
+
+boxes.forEach((box)=>{
+
+box.onmouseover= function() {mouseOver()};
+
+function mouseOver () {
+
+box.style.backgroundColor = "black";
+};
+
+});
+
+
+}
+
+run();
+
+</script>
+
+</body>
+</html>
